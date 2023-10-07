@@ -1,4 +1,4 @@
-package ru.mpei.DZ6;
+package ru.mpei.DZ6_v1;
 
 import lombok.SneakyThrows;
 import org.reflections.Reflections;
@@ -7,6 +7,7 @@ import org.reflections.scanners.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.util.*;
 
 public class AutoCallableUnderHood {
@@ -16,9 +17,9 @@ public class AutoCallableUnderHood {
         String line = reader.readLine();
         Map<Call, String> result = new HashMap<>();
         Reflections r = new Reflections(Call.class, Scanners.MethodsAnnotated);
-//        Reflections r1 = new Reflections(Call.class, Scanners.MethodsParameter);
-//
-//        Set<Method> methods1 = r.getMethodsWithParameter(AutoCallable.class);
+        Reflections r1 = new Reflections(Call.class, Scanners.MethodsParameter);
+
+
         // сюда передаем название аннотации
         Set<Method> methods = r.getMethodsAnnotatedWith(AutoCallable.class);
         for (Method method: methods){

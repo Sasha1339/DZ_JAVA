@@ -1,4 +1,4 @@
-package ru.mpei.DZ6;
+package ru.mpei.DZ6_v2;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

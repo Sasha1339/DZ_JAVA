@@ -1,4 +1,4 @@
-package ru.mpei.DZ6;
+package ru.mpei.DZ6_v2;
 
 public class Main {
 

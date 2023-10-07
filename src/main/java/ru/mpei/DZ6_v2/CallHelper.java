@@ -1,6 +1,5 @@
-package ru.mpei.DZ6;
+package ru.mpei.DZ6_v2;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class CallHelper {
@@ -19,7 +18,7 @@ public class CallHelper {
         for (Map.Entry<Call, String> entry: classWithMethods.entrySet()){
             Call call = entry.getKey();
             String line = entry.getValue();
-            call.call(line);
+            call.call(line, "2");
         }
     }
 
