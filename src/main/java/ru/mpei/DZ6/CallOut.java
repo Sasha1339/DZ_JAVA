@@ -1,0 +1,9 @@
+package ru.mpei.DZ6;
+
+public class CallOut implements Call {
+    @Override
+    @AutoCallable
+    public void call(String line) {
+        System.out.println(line);
+    }
+}
