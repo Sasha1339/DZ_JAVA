@@ -18,7 +18,7 @@ public class CallHelper {
         for (Map.Entry<Call, String> entry: classWithMethods.entrySet()){
             Call call = entry.getKey();
             String line = entry.getValue();
-            call.call(line, "2");
+            call.call(line);
         }
     }
 
