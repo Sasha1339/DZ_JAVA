@@ -16,12 +16,10 @@ public class AutoCallableUnderHood {
         BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/config.txt"));
         String line = reader.readLine();
         Map<Call, String> result = new HashMap<>();
-        Reflections r = new Reflections(Call.class, Scanners.MethodsAnnotated);
-        Reflections r1 = new Reflections(Call.class, Scanners.MethodsParameter);
-
+        Reflections reflections = new Reflections(Call.class, Scanners.MethodsAnnotated);
 
         // сюда передаем название аннотации
-        Set<Method> methods = r.getMethodsAnnotatedWith(AutoCallable.class);
+        Set<Method> methods = reflections.getMethodsAnnotatedWith(AutoCallable.class);
         for (Method method: methods){
             if (!Call.class.isAssignableFrom(method.getDeclaringClass())){
                 continue;
